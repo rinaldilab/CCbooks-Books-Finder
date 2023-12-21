@@ -8,7 +8,7 @@ def ccbooks(isbn, cat):
     The user input is the isbn code.
     Generally, the isbn code consists of 13 or 10 digits"""
 
-    req = requests.get("https://www.googleapis.com/books/v1/volumes?q=isbn:"+str(isbn))
+    req = requests.get(f"https://www.googleapis.com/books/v1/volumes?q=isbn:{str(isbn)}")
     res=req.json()
     if(res["totalItems"]==0):
         bookResult="Libro non trovato"
@@ -27,6 +27,8 @@ def ccbooks(isbn, cat):
         bookImage=resBook["volumeInfo"]["imageLinks"]["thumbnail"]
         bookLanguage=resBook["volumeInfo"]["language"]
         bookGoogleLink=resBook["volumeInfo"]["previewLink"]
-        bookResult="<br><img src='"+bookImage+"' ><br><b>Titolo:</b> "+bookTitle+"<br><b>Autore:</b> "+bookAuthors+"<br><b>Casa Editrice:</b> "+bookPublisher+"<br><b>Data di pubblicazione:</b> "+bookPublisherDate+"<br><b>Descrizione:</b> "+bookDescription+"<br><b>ISBN:</b> "+bookIsbn+"<br><b>Genere:</b> "+bookCategories+"<br><b>Numero di pagine:</b> "+bookPageCount+"<br><b>Lingua:</b> "+bookLanguage+"<br><b>Link libro:</b> <a href='"+bookGoogleLink+"'>Clicca QUI</a>"
+        bookResult=f"""<br><img src='{bookImage}' ><br><b>Titolo:</b> {bookTitle}<br><b>Autore:</b>{bookAuthors}<br><b>Casa Editrice:</b>{bookPublisher}<br>
+        <b>Data di pubblicazione:</b>{bookPublisherDate}<br><b>Descrizione:</b>{bookDescription}<br><b>ISBN:</b>{bookIsbn}<br><b>Genere:</b>{bookCategories}<br>
+        <b>Numero di pagine:</b>{bookPageCount}<br><b>Lingua:</b>{bookLanguage}<br><b>Link libro:</b> <a href='{bookGoogleLink}'>Clicca QUI</a>"""
 
     return bookResult
