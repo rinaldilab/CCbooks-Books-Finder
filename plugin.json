@@ -1,6 +1,6 @@
 {
     "name": "Ccbooks - Books Finder",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A simple plugin to allow Cheshire Cat to search for book information from the ISBN. To use the plugin, enter the word ISBN and the code ",
     "author_name": "Daniele Rinaldi",
     "author_url": "https://www.labrinaldi.it",
