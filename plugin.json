@@ -1,10 +1,10 @@
 {
-    "name": "My plugin",
+    "name": "Ccbooks - Books Finder",
     "version": "0.0.1",
-    "description": "Description of my_plugin.",
-    "author_name": "Me",
-    "author_url": "https://mywebsite.me",
-    "plugin_url": "https://github.com/my_name/my_plugin",
-    "tags": "cat, template, example",
-    "thumb": "https://raw.githubusercontent.com/my_repo_path/my_plugin.png"
+    "description": "A simple plugin to allow Cheshire Cat to search for book information from the ISBN. To use the plugin, enter the word ISBN and the code ",
+    "author_name": "Daniele Rinaldi",
+    "author_url": "https://www.labrinaldi.it",
+    "plugin_url": "https://github.com/rinaldilab/CCbooks-Books-Finder",
+    "tags": "cat, ISBN, Books, Find, Trova, Libri",
+    "thumb": "https://raw.githubusercontent.com/rinaldilab/CCbooks-Books-Finder/main/ccbooks_-_books_finder.png"
 }
